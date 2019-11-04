@@ -6,10 +6,20 @@
         xmlns:local="clr-namespace:Ordenamiento"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800" WindowStartupLocation="CenterScreen">
-    <Grid>
-        <ListBox x:Name="lstNumeros" HorizontalAlignment="Left" Height="399" Margin="10,10,0,0" VerticalAlignment="Top" Width="175"></ListBox>
-        <Button Name="btnOrdenar" Content="Shell" HorizontalAlignment="Left" Margin="190,10,0,0" VerticalAlignment="Top" Width="75" Click="BtnOrdenar_Click"/>
-        <Button Name="btnBubble" Content="Bubble" HorizontalAlignment="Left" Margin="190,35,0,0" VerticalAlignment="Top" Width="75" Click="BtnBubble_Click"/>
+    <Grid Margin="-1,0,1,0">
+        <ListView x:Name="lstNumeros" HorizontalAlignment="Left" Height="399" Margin="10,10,0,0" VerticalAlignment="Top" Width="380">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn DisplayMemberBinding="{Binding Nombre}" Header="Nombre" Width="120"></GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding="{Binding Promedio}" Header="Promedio" Width="120"></GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding="{Binding Faltas}" Header="Faltas" Width="120"></GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button Name="btnOrdenar" Content="Ordenar Shell por Promedio" HorizontalAlignment="Left" Margin="475,10,0,0" VerticalAlignment="Top" Width="205" Click="BtnOrdenar_Click"/>
+        <Button Name="btnBubble" Content="Ordenar Bubble por Promedio" HorizontalAlignment="Left" Margin="475,35,0,0" VerticalAlignment="Top" Width="205" Click="BtnBubble_Click"/>
+        <Button x:Name="btnOrdenarFaltas" Content="Ordenar Shell por Faltas" HorizontalAlignment="Left" Margin="475,80,0,0" VerticalAlignment="Top" Width="205" Click="BtnOrdenarFaltas_Click"/>
+        <Button x:Name="btnBubbleFaltas" Content="Ordenar Bubble por Faltas" HorizontalAlignment="Left" Margin="475,105,0,0" VerticalAlignment="Top" Width="205" Click="BtnBubbleFaltas_Click"/>
 
     </Grid>
 </Window>

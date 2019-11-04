@@ -8,9 +8,9 @@ namespace Ordenamiento
 {
     class Alumno
     {
-        string Nombre { get; set; }
-        float Promedio { get; set;}
-        int Faltas { get; set; }
+        public string Nombre { get; set; }
+        public float Promedio { get; set;}
+        public int Faltas { get; set; }
 
         public Alumno(string nombre, float promedio, int faltas)
         {
